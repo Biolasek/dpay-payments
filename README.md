@@ -15,6 +15,7 @@ const dpayObj = new dpay("Service name", "Secret hash"/*, production (default tr
 test();
 
 async function test() {
+    /* You can add more params if you want comparably to dpay docs : https://docs.dpay.pl/#operation/registerPayment ("Request samples") */
     const res = await dpayObj.createPayment("1.00", "https://github.com/Biolasek/success", "https://github.com/Biolasek/fail", "https://github.com/Biolasek/ipn");
 
     /**
