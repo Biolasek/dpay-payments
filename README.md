@@ -60,7 +60,7 @@ async function test() {
 
     /**
      * Example response on success:
-     * { status: true, msisdn: '668668265', code: '1appur', tariff: 1, number: '7043', vat: '0.65', net: '0.50', net_gross: 0.25, revenue: 50 }
+     * { status: true, msisdn: '123123123', code: '1appur', tariff: 1, number: '7043', vat: '0.65', net: '0.50', net_gross: 0.25, revenue: 50 }
      * Full information here in "Response samples" : https://docs.dpay.pl/#operation/verifyCode
     */
     console.log(res);
