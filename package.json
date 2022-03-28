@@ -1,0 +1,19 @@
+{
+  "name": "dpay-payments",
+  "version": "1.0.0",
+  "description": "NodeJS lib for polish payment \"dpay\"",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biolasek/dpay-payments.git"
+  },
+  "keywords": [
+    "dpay",
+    "polish",
+    "payment",
+    "money",
+    "tranfser"
+  ],
+  "author": "Biolasek",
+  "license": "ISC"
+}
