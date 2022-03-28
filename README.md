@@ -1,2 +1,2 @@
 # dpay-payments
- NodeJS lib for polish payment "dpay"
+Unofficial API for dpay polish payments.
