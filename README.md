@@ -9,7 +9,7 @@ npm i dpay-payments
 ### Sample usage
 *Creating payment*
 ```js
-const dpay = require('dpay-payments');
+const { dpay } = require('dpay-payments');
 const dpayObj = new dpay("Service name", "Secret hash"/*, production (default true)*/);
 [...]
 test();
@@ -44,5 +44,25 @@ async function sthother(transaction_id) {
      * More information here in "Response samples" : https://docs.dpay.pl/#operation/transactionDetails
     */
     console.log(information);
+}
+```
+
+*Check the sms code*
+```js
+const { dpaySMS } = require('dpay-payments');
+const dpayObj = new dpaySMS("Service ID", "Client ID"/*, production (default true)*/);
+[...]
+test();
+
+async function test() {
+    [...]
+    const res = await dpayObj.paymentStatus("sms code");
+
+    /**
+     * Example response on success:
+     * { status: true, msisdn: '668668265', code: '1appur', tariff: 1, number: '7043', vat: '0.65', net: '0.50', net_gross: 0.25, revenue: 50 }
+     * Full information here in "Response samples" : https://docs.dpay.pl/#operation/verifyCode
+    */
+    console.log(res);
 }
 ```
