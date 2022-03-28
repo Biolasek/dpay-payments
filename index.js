@@ -45,4 +45,19 @@ class dpay {
     //     }
     // }
 }
-module.exports = dpay;
+
+class dpaySMS {
+    constructor(clientid, serviceid, production = true) {
+        this.url = production ? `https://panel.dpay.pl/api/v1/sms/verify/${clientid}/${serviceid}`:`https://panel.digitalpayments.pl/api/v1/sms/verify/${clientid}/${serviceid}`;
+    }
+
+    async paymentStatus(code) {
+        try {
+            const res = await axios.get(`${this.url}/${code}`);
+            return res.data;
+        } catch (err) {
+            return JSON.stringify({ status: false, error: true, errorcode: err.response.data.errorcode, message: err.response.data.message });
+        }
+    }
+}
+module.exports = { dpay, dpaySMS };
