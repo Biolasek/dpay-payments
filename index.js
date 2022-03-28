@@ -30,6 +30,7 @@ class dpay {
         }
     }
 
+    // Maybe one day...
     // async refundPayment(transaction_id) {
     //     const checksum = sha256(`${this.service}|${transaction_id}|${this.hash}`);
     //     const query = { service: this.service, transaction_id, checksum };
